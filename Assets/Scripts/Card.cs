@@ -71,4 +71,12 @@ public class Card : MonoBehaviour
     {
         
     }
+
+    void openCard()
+    {
+        
+    }
+
+
+
 }
