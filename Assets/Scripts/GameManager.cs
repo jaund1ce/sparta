@@ -23,21 +23,19 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(time);
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
-        failTxt.SetActive(false);
+        //failTxt.SetActive(false);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(time);
         time += Time.deltaTime;
         timeTxt.text = time.ToString("N2");
 
-        if (time >= 10.0f)
+        if (time >= 30f)
         {
             failTxt.SetActive(true);
             Time.timeScale = 0.0f;
