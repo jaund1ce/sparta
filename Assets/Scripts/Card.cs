@@ -19,7 +19,7 @@ public class Card : MonoBehaviour
     public void Setting(int idx)
     {
         index = idx;
-        frontImage.sprite = Resources.Load<Sprite>($"rtan{index}");
+        frontImage.sprite = Resources.Load<Sprite>($"card{index}");
     }
     public void OpenCard()
     {
