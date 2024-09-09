@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip clip;
+    public AudioClip countdown;
 
     void Start()
     {
@@ -34,10 +35,15 @@ public class GameManager : MonoBehaviour
         time += Time.deltaTime;
         timeTxt.text = time.ToString("N2");
 
-        if (Time.time >= 10)
+        if (time >= 30.0f)
         {
-            failTxt.SetActive(true);
             Time.timeScale = 0.0f;
+            failTxt.SetActive(true);  
+        }
+
+        if(time >= 27.0f)
+        {
+            audioSource.PlayOneShot(countdown);
         }
 
     }

@@ -549,6 +549,7 @@ MonoBehaviour:
   clearTxt: {fileID: 905759399}
   audioSource: {fileID: 0}
   clip: {fileID: 8300000, guid: fc91906e0a644ad42b9be4450ef35d44, type: 3}
+  countdown: {fileID: 8300000, guid: 36cfe1c5c9f49f24c8b53dbe9a3adbd6, type: 3}
 --- !u!4 &1291322565
 Transform:
   m_ObjectHideFlags: 0
