@@ -354,6 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
+  card: {fileID: 0}
   frontImage: {fileID: 7278204135189267032}
   front: {fileID: 7547464692011916227}
   back: {fileID: 4575073469735051731}

@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
-        //failTxt.SetActive(false);
+        failTxt.SetActive(false);
 
     }
 
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     {
         if (firstCard.index == secondCard.index)
         {
-            audioSource.PlayOneShot(matchclip);
+            Invoke("playmatch", 0.5f);
 
             firstCard.DestroyCard();
             secondCard.DestroyCard();
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            audioSource.PlayOneShot(failclip);
+            Invoke("playfail", 0.5f);
             firstCard.CloseCard();
             secondCard.CloseCard();
         }
@@ -85,4 +85,13 @@ public class GameManager : MonoBehaviour
         secondCard = null;
     }
 
+    void playfail()
+    {
+        audioSource.PlayOneShot(failclip);
+    }
+
+    void playmatch()
+    {
+        audioSource.PlayOneShot(matchclip);
+    }
 }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+
 
 public class Card : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class Card : MonoBehaviour
     public GameObject back;
 
     public Animator anim;
+
+    
 
     public AudioClip clip;
     public AudioSource audioSource;
@@ -25,8 +29,9 @@ public class Card : MonoBehaviour
     {
         audioSource.PlayOneShot(clip);
         anim.SetBool("isOpen", true);
-        front.SetActive(true);
-        back.SetActive(false);
+        Invoke("frontactive", 0.4f);
+        Invoke("backactive", 0.4f);
+
 
         if (GameManager.Instance.firstCard == null)
         {
@@ -41,7 +46,7 @@ public class Card : MonoBehaviour
 
     public void DestroyCard()
      {
-		Invoke("DestoryCardInvoke", 0.5f);
+		Invoke("DestoryCardInvoke", 1f);
      }
 
     void DestoryCardInvoke()
@@ -51,7 +56,7 @@ public class Card : MonoBehaviour
 
     public void CloseCard()
     {
-        Invoke("CloseCardInvoke", 0.5f);
+        Invoke("CloseCardInvoke", 1f);
     }
 
     void CloseCardInvoke()
@@ -71,4 +76,20 @@ public class Card : MonoBehaviour
     {
         
     }
+
+    void frontactive()
+    {
+        front.SetActive(true);
+    }
+ 
+    void backactive()
+    {
+        back.SetActive(false);
+    }
+
+    void playAudio()
+    {
+        audioSource.PlayOneShot(clip);
+    }
+
 }
