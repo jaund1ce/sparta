@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         time += Time.deltaTime;
         timeTxt.text = time.ToString("N2");
 
-        if (Time.time >= 10)
+        if (time >= 10.0f)
         {
             failTxt.SetActive(true);
             Time.timeScale = 0.0f;
