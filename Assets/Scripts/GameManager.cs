@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
-        failTxt.SetActive(false);
+        //failTxt.SetActive(false);
 
     }
 
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         time += Time.deltaTime;
         timeTxt.text = time.ToString("N2");
 
-        if (Time.time >= 10)
+        if (time >= 30f)
         {
             failTxt.SetActive(true);
             Time.timeScale = 0.0f;
