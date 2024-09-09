@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour
     public GameObject clearTxt;
 
     public AudioSource audioSource;
-    public AudioClip clip;
+    public AudioClip matchclip;
+    public AudioClip failclip;
 
     void Start()
     {
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
     {
         if (firstCard.index == secondCard.index)
         {
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(matchclip);
 
             firstCard.DestroyCard();
             secondCard.DestroyCard();
@@ -69,6 +70,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            audioSource.PlayOneShot(failclip);
             firstCard.CloseCard();
             secondCard.CloseCard();
         }

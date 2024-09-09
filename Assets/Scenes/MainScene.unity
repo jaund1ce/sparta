@@ -548,7 +548,8 @@ MonoBehaviour:
   failTxt: {fileID: 1657167316}
   clearTxt: {fileID: 905759399}
   audioSource: {fileID: 0}
-  clip: {fileID: 8300000, guid: fc91906e0a644ad42b9be4450ef35d44, type: 3}
+  matchclip: {fileID: 8300000, guid: 6b8f5755ab05ca1438caae7b90075857, type: 3}
+  failclip: {fileID: 8300000, guid: d1a8191fc745ebc4c90237ddf2a37251, type: 3}
 --- !u!4 &1291322565
 Transform:
   m_ObjectHideFlags: 0
