@@ -87,5 +87,9 @@ public class Card : MonoBehaviour
         back.SetActive(false);
     }
 
+    void playAudio()
+    {
+        audioSource.PlayOneShot(clip);
+    }
 
 }
