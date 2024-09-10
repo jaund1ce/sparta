@@ -19,7 +19,7 @@ public class Card : MonoBehaviour
     public AudioClip clip;
     public AudioSource audioSource;
 
-
+    public Animator cardAnimator;
     public void Setting(int idx)
     {
         index = idx;
@@ -68,7 +68,17 @@ public class Card : MonoBehaviour
 
     void Start()
     {
+        cardAnimator = GetComponent<Animator>();
+        cardAnimator.enabled = false;
+        transform.localScale = new Vector3(3f, 3f, 1f);
         audioSource = GetComponent<AudioSource>();
+        InvokeRepeating("CardScaleDown", 0f, 0.02f);
+
+       if(transform.localScale.x <= 1.3)
+        {
+            cardAnimator.enabled = true;
+       }
+
     }
 
     // Update is called once per frame
@@ -87,5 +97,11 @@ public class Card : MonoBehaviour
         back.SetActive(false);
     }
 
-
+    void CardScaleDown()
+    {
+        if (transform.localScale.x > 1.3)
+        {
+        transform.localScale -= new Vector3(0.02f, 0.02f, 0f);
+        }
+    }
 }
