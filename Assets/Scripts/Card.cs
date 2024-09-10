@@ -74,6 +74,8 @@ public class Card : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         InvokeRepeating("CardScaleDown", 0f, 0.02f);
 
+       
+
     }
 
     // Update is called once per frame
