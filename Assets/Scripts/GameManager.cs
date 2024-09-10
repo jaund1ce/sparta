@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public AudioClip countdown;
     public AudioClip matchclip;
     public AudioClip failclip;
+    public GameObject hammer;
 
     public GameObject transparent;//투명
 
@@ -42,6 +43,8 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0.0f;
             transparent.SetActive(false);
+            Cursor.visible = true; // 마우스 커서 활성화
+            hammer.SetActive(false); // 해머 오브젝트 종료
         }
 
         if (time >= 27.0f)
