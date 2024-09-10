@@ -13,6 +13,12 @@ public class GameManager : MonoBehaviour
     public Card firstCard;
     public Card secondCard;
 
+    public GameObject card01;
+    public GameObject card02;
+    public GameObject card03;
+    public GameObject card04;
+
+
     public int cardCount = 0;
     public GameObject failTxt;
     public GameObject clearTxt;

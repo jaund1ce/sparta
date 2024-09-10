@@ -2321,7 +2321,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1845983061}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1059717431
@@ -2912,6 +2913,10 @@ MonoBehaviour:
   timeTxt: {fileID: 738148075}
   firstCard: {fileID: 0}
   secondCard: {fileID: 0}
+  card01: {fileID: 1086125169}
+  card02: {fileID: 1356003891}
+  card03: {fileID: 1532069738}
+  card04: {fileID: 1668039080}
   cardCount: 0
   failTxt: {fileID: 1657167316}
   clearTxt: {fileID: 1902308494}
@@ -4921,13 +4926,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845983060}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 138201188}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1028197945}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1845983062
 MonoBehaviour:
@@ -5633,6 +5638,5 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 2005524437}
   - {fileID: 1028197945}
-  - {fileID: 1845983061}
   - {fileID: 1291322565}
   - {fileID: 1084776874}

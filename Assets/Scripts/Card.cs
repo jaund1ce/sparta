@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
@@ -18,23 +19,49 @@ public class Card : MonoBehaviour
     public GameObject front;
     public GameObject back;
 
+
     public Animator anim;
 
 
     public AudioClip clip;
     public AudioSource audioSource;
 
-    Vector3 startPos;
-    public Vector3 endPos;
+    Vector2 startPos;
+    public Vector2 endPos;
+
+    public float speed;
+
+    float t = 0f;
 
     void start()
     {
         startPos = transform.position;
+
+        
     }
     public void Setting(int idx)
     {
+        
         index = idx;
         frontImage.sprite = Resources.Load<Sprite>($"card{index}");
+        
+        
+        if (index == 0 || index == 1)
+        {
+            endPos = GameManager.Instance.card02.transform.position;                               // new Vector3(-0.649999976f, 2.5f, 0f);
+        }
+        else if (index == 2 || index == 3)
+        {
+            endPos = GameManager.Instance.card03.transform.position;                                                                   //new Vector3(0.649999976f, 2.5f, 0f);
+        }
+        else if (index == 4 || index == 5)
+        {
+            endPos = GameManager.Instance.card01.transform.position;                           //new Vector3(-1.95000005f, 2.5f, 0f);
+        }
+        else if (index == 6 || index == 7)
+        {
+            endPos = GameManager.Instance.card04.transform.position;                                   //new Vector3(1.95000005f, 2.5f, 0f);
+        }
 
     }
     public void OpenCard()
@@ -87,30 +114,19 @@ public class Card : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (index == 0 && index == 1)
-        {
-            endPos = new Vector3(-0.649999976f, 2.5f, 0f);
-        }
-        else if (index == 2 && index == 3)
-        {
-            endPos = new Vector3(0.649999976f, 2.5f, 0f);
-        }
-        else if (index == 4 && index == 5)
-        {
-            endPos = new Vector3(-1.95000005f, 2.5f, 0f);
-        }
-        else if (index == 6 && index == 7)
-        {
-            endPos = new Vector3(1.95000005f, 2.5f, 0f);
-        }
+        
 
         if (ismatched == true)
         {
-            
-
-            transform.position = Vector3.Lerp(startPos, endPos, Time.deltaTime);
-
+            t += Time.deltaTime * speed;
+            transform.position = Vector2.Lerp(startPos, endPos, t);
         }
+        else
+        {
+            return;
+        }
+
+        
     }
 
     void frontactive()
