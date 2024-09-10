@@ -15,10 +15,10 @@ public class Card : MonoBehaviour
 
     public Animator anim;
 
-    
 
     public AudioClip clip;
     public AudioSource audioSource;
+
 
     public void Setting(int idx)
     {

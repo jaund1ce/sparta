@@ -16,17 +16,19 @@ public class GameManager : MonoBehaviour
     public int cardCount = 0;
     public GameObject failTxt;
     public GameObject clearTxt;
-
     public AudioSource audioSource;
+
+    public AudioClip countdown;
     public AudioClip matchclip;
     public AudioClip failclip;
+
 
     void Start()
     {
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
         failTxt.SetActive(false);
-
+        Camera.main.backgroundColor = new Color(90/255f, 90/255f, 1f);
     }
 
     // Update is called once per frame
@@ -35,10 +37,16 @@ public class GameManager : MonoBehaviour
         time += Time.deltaTime;
         timeTxt.text = time.ToString("N2");
 
-        if (time >= 30f)
+        if (time >= 30.0f)
         {
-            failTxt.SetActive(true);
             Time.timeScale = 0.0f;
+            failTxt.SetActive(true);  
+        }
+
+        if(time >= 27.0f)
+        {
+            audioSource.PlayOneShot(countdown);
+            Camera.main.backgroundColor = new Color(1f, 1f, 0f);
         }
 
     }
