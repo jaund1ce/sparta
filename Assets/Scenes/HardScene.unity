@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575ea32c89087294dbc008854261c764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Introduce: {fileID: 619498976}
+  Introduce: {fileID: 0}
 --- !u!114 &619498981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1635,7 +1635,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3137255}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.3137255}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1800,7 +1800,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 905759403}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
-        m_MethodName: Retry
+        m_MethodName: stage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2112,7 +2112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575ea32c89087294dbc008854261c764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Introduce: {fileID: 1415324817}
+  Introduce: {fileID: 0}
 --- !u!1 &1008006029
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,7 +2207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575ea32c89087294dbc008854261c764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Introduce: {fileID: 1008006029}
+  Introduce: {fileID: 0}
 --- !u!114 &1008006034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2575,7 +2575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575ea32c89087294dbc008854261c764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Introduce: {fileID: 1008006029}
+  Introduce: {fileID: 0}
 --- !u!114 &1082952276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3008,7 +3008,7 @@ MonoBehaviour:
   countdown: {fileID: 8300000, guid: de18569aaa9f38844ab0a03781154b00, type: 3}
   matchclip: {fileID: 8300000, guid: 6b8f5755ab05ca1438caae7b90075857, type: 3}
   failclip: {fileID: 8300000, guid: d1a8191fc745ebc4c90237ddf2a37251, type: 3}
-  hammer: {fileID: 1648228954}
+  hammer: {fileID: 0}
   transparent: {fileID: 833053911}
 --- !u!4 &1291322565
 Transform:
@@ -3360,63 +3360,6 @@ Transform:
   - {fileID: 729073931}
   m_Father: {fileID: 138201188}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1376891151
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2720468163085277574, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
-      propertyPath: m_Name
-      value: Hammer
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
 --- !u!1 &1401217067
 GameObject:
   m_ObjectHideFlags: 0
@@ -3663,7 +3606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575ea32c89087294dbc008854261c764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Introduce: {fileID: 1415324817}
+  Introduce: {fileID: 0}
 --- !u!114 &1415324822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3974,7 +3917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575ea32c89087294dbc008854261c764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Introduce: {fileID: 1472485391}
+  Introduce: {fileID: 0}
 --- !u!114 &1472485396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4424,11 +4367,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621372496}
   m_CullTransparentMesh: 1
---- !u!1 &1648228954 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2720468163085277574, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
-  m_PrefabInstance: {fileID: 1376891151}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1657167316
 GameObject:
   m_ObjectHideFlags: 0
@@ -4555,8 +4493,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1657167323}
-        m_TargetAssemblyTypeName: RetryButton, Assembly-CSharp
-        m_MethodName: Retry
+        m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
+        m_MethodName: stage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5242,7 +5180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575ea32c89087294dbc008854261c764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Introduce: {fileID: 1472485391}
+  Introduce: {fileID: 0}
 --- !u!1 &1902308494
 GameObject:
   m_ObjectHideFlags: 0
@@ -5704,7 +5642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575ea32c89087294dbc008854261c764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Introduce: {fileID: 619498976}
+  Introduce: {fileID: 0}
 --- !u!1 &2112016364
 GameObject:
   m_ObjectHideFlags: 0
@@ -5790,4 +5728,3 @@ SceneRoots:
   - {fileID: 1291322565}
   - {fileID: 1084776874}
   - {fileID: 833053913}
-  - {fileID: 1376891151}
