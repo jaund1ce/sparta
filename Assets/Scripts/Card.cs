@@ -1,54 +1,49 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
-using System.Net;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 
 public class Card : MonoBehaviour
 {
-    
     bool ismatched = false;
-
     public int index = 0;
 
     public SpriteRenderer frontImage;
 
     public GameObject front;
     public GameObject back;
+
     public Animator anim;
-
-
-    public AudioClip clip;
-    public AudioSource audioSource;
 
     Vector2 startPos;
     public Vector2 endPos;
 
     public float speed;
-
     float t = 0f;
+
+    public AudioClip clip;
+    public AudioSource audioSource;
+
+    public Animator cardAnimator;
 
     void start()
     {
-        startPos = transform.position; 
+        startPos = transform.position;
     }
+
     public void Setting(int idx)
     {
-        
         index = idx;
         frontImage.sprite = Resources.Load<Sprite>($"card{index}");
-        
-        
+
         if (index == 0 || index == 1)
         {
-            endPos = GameManager.Instance.card02.transform.position;                               // new Vector3(-0.649999976f, 2.5f, 0f);
+            endPos = GameManager.Instance.card02.transform.position;                            // new Vector3(-0.649999976f, 2.5f, 0f);
         }
         else if (index == 2 || index == 3)
         {
-            endPos = GameManager.Instance.card03.transform.position;                                                                   //new Vector3(0.649999976f, 2.5f, 0f);
+            endPos = GameManager.Instance.card03.transform.position;                            //new Vector3(0.649999976f, 2.5f, 0f);
         }
         else if (index == 4 || index == 5)
         {
@@ -56,7 +51,7 @@ public class Card : MonoBehaviour
         }
         else if (index == 6 || index == 7)
         {
-            endPos = GameManager.Instance.card04.transform.position;                                   //new Vector3(1.95000005f, 2.5f, 0f);
+            endPos = GameManager.Instance.card04.transform.position;                           //new Vector3(1.95000005f, 2.5f, 0f);
         }
 
     }
@@ -104,12 +99,23 @@ public class Card : MonoBehaviour
 
     void Start()
     {
+        cardAnimator = GetComponent<Animator>();
+        cardAnimator.enabled = false;
+        transform.localScale = new Vector3(3f, 3f, 1f);
         audioSource = GetComponent<AudioSource>();
+        InvokeRepeating("CardScaleDown", 0f, 0.02f);
+
+       
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (transform.localScale.x <= 1.3)
+        {
+            cardAnimator.enabled = true;
+        }
         
 
         if (ismatched == true)
@@ -122,7 +128,6 @@ public class Card : MonoBehaviour
             return;
         }
 
-        
     }
 
     void frontactive()
@@ -135,4 +140,11 @@ public class Card : MonoBehaviour
         back.SetActive(false);
     }
 
+    void CardScaleDown()
+    {
+        if (transform.localScale.x > 1.3)
+        {
+        transform.localScale -= new Vector3(0.02f, 0.02f, 0f);
+        }
+    }
 }
