@@ -697,9 +697,8 @@ MonoBehaviour:
   cardCount: 0
   failTxt: {fileID: 1657167316}
   clearTxt: {fileID: 1902308494}
-  MainCamera: {fileID: 519420028}
   audioSource: {fileID: 0}
-  countdown: {fileID: 8300000, guid: 36cfe1c5c9f49f24c8b53dbe9a3adbd6, type: 3}
+  countdown: {fileID: 8300000, guid: de18569aaa9f38844ab0a03781154b00, type: 3}
   matchclip: {fileID: 8300000, guid: 6b8f5755ab05ca1438caae7b90075857, type: 3}
   failclip: {fileID: 8300000, guid: d1a8191fc745ebc4c90237ddf2a37251, type: 3}
 --- !u!4 &1291322565
@@ -729,7 +728,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.618
   m_Pitch: 1
   Loop: 0
   Mute: 0
