@@ -6,7 +6,6 @@ using System.Linq;
 public class Board : MonoBehaviour
 {
     public GameObject card;
-
     private void Start()
     {
         int[] arr = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7 };
@@ -24,5 +23,4 @@ public class Board : MonoBehaviour
         }
         GameManager.Instance.cardCount = arr.Length;
     }
-
 }
