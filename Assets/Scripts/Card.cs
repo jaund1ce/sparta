@@ -74,17 +74,17 @@ public class Card : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         InvokeRepeating("CardScaleDown", 0f, 0.02f);
 
-       if(transform.localScale.x <= 1.3)
-        {
-            cardAnimator.enabled = true;
-       }
+       
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.localScale.x <= 1.3)
+        {
+            cardAnimator.enabled = true;
+        }
     }
 
     void frontactive()
