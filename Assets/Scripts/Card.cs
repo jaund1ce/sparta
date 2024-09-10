@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 
 public class Card : MonoBehaviour
 {
+    
+    bool ismatched = false;
+
     public int index = 0;
 
     public SpriteRenderer frontImage;
@@ -19,11 +24,18 @@ public class Card : MonoBehaviour
     public AudioClip clip;
     public AudioSource audioSource;
 
+    Vector3 startPos;
+    public Vector3 endPos;
 
+    void start()
+    {
+        startPos = transform.position;
+    }
     public void Setting(int idx)
     {
         index = idx;
         frontImage.sprite = Resources.Load<Sprite>($"card{index}");
+
     }
     public void OpenCard()
     {
@@ -46,6 +58,7 @@ public class Card : MonoBehaviour
 
     public void DestroyCard()
      {
+        ismatched = true;
 		Invoke("DestoryCardInvoke", 1f);
      }
 
@@ -74,7 +87,30 @@ public class Card : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (index == 0 && index == 1)
+        {
+            endPos = new Vector3(-0.649999976f, 2.5f, 0f);
+        }
+        else if (index == 2 && index == 3)
+        {
+            endPos = new Vector3(0.649999976f, 2.5f, 0f);
+        }
+        else if (index == 4 && index == 5)
+        {
+            endPos = new Vector3(-1.95000005f, 2.5f, 0f);
+        }
+        else if (index == 6 && index == 7)
+        {
+            endPos = new Vector3(1.95000005f, 2.5f, 0f);
+        }
+
+        if (ismatched == true)
+        {
+            
+
+            transform.position = Vector3.Lerp(startPos, endPos, Time.deltaTime);
+
+        }
     }
 
     void frontactive()
@@ -87,5 +123,9 @@ public class Card : MonoBehaviour
         back.SetActive(false);
     }
 
+    void movewhere()
+    {
+        
+    }
 
 }
