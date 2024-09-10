@@ -18,8 +18,20 @@ public class NewBehaviourScript : MonoBehaviour
     }
 
     
-    public void Retry()
+    public void stage()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("StageScene");
+    }
+    public void easyBtn()
+    {
+        SceneManager.LoadScene("EasyScene");
+    }
+    public void NomalBtn()
+    {
+        SceneManager.LoadScene("NomalScene");
+    }
+    public void HardBtn()
+    {
+        SceneManager.LoadScene("HardScene");
     }
 }
