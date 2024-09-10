@@ -13,6 +13,12 @@ public class GameManager : MonoBehaviour
     public Card firstCard;
     public Card secondCard;
 
+    public GameObject card01;
+    public GameObject card02;
+    public GameObject card03;
+    public GameObject card04;
+
+
     public int cardCount = 0;
     public GameObject failTxt;
     public GameObject clearTxt;
@@ -21,6 +27,7 @@ public class GameManager : MonoBehaviour
     public AudioClip countdown;
     public AudioClip matchclip;
     public AudioClip failclip;
+    public GameObject hammer;
 
     public GameObject transparent;//투명
 
@@ -42,6 +49,8 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0.0f;
             transparent.SetActive(false);
+            Cursor.visible = true; // 마우스 커서 활성화
+            hammer.SetActive(false); // 해머 오브젝트 종료
         }
 
         if (time >= 27.0f)
