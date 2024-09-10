@@ -24,7 +24,4 @@ public class Board : MonoBehaviour
         }
         GameManager.Instance.cardCount = arr.Length;
     }
-
-
-
 }

@@ -18,8 +18,6 @@ public class Card : MonoBehaviour
 
     public GameObject front;
     public GameObject back;
-
-
     public Animator anim;
 
 
@@ -135,11 +133,6 @@ public class Card : MonoBehaviour
     void backactive()
     {
         back.SetActive(false);
-    }
-
-    void movewhere()
-    {
-        
     }
 
 }
