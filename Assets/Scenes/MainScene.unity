@@ -697,6 +697,7 @@ MonoBehaviour:
   cardCount: 0
   failTxt: {fileID: 1657167316}
   clearTxt: {fileID: 1902308494}
+  MainCamera: {fileID: 519420028}
   audioSource: {fileID: 0}
   countdown: {fileID: 8300000, guid: 36cfe1c5c9f49f24c8b53dbe9a3adbd6, type: 3}
   matchclip: {fileID: 8300000, guid: 6b8f5755ab05ca1438caae7b90075857, type: 3}
