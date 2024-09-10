@@ -22,15 +22,13 @@ public class GameManager : MonoBehaviour
     public AudioClip matchclip;
     public AudioClip failclip;
 
-    public GameObject transparent;
 
     void Start()
     {
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
         failTxt.SetActive(false);
-        //Camera.main.backgroundColor = new Color(90/255f, 90/255f, 1f);
-        transparent.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -48,8 +46,7 @@ public class GameManager : MonoBehaviour
         if(time >= 27.0f)
         {
             audioSource.PlayOneShot(countdown);
-            transparent.SetActive(true);
-
+            
         }
 
     }
