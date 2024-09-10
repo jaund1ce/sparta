@@ -22,13 +22,21 @@ public class GameManager : MonoBehaviour
     public AudioClip matchclip;
     public AudioClip failclip;
 
-
+    public GameObject cameraColor; // 부모 Canvas 오브젝트
+    public float fadeDuration = 2.0f; // 투명도를 변화시키는 시간(초)
+    Image mainColorImage;
     void Start()
     {
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
         failTxt.SetActive(false);
         Camera.main.backgroundColor = new Color(90/255f, 90/255f, 1f);
+
+        Transform mainColorTransform = cameraColor.transform.Find("MainColorImage");
+        if (mainColorTransform != null)
+        {
+            mainColorImage = mainColorTransform.GetComponent<Image>();
+        }
     }
 
     // Update is called once per frame
