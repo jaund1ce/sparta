@@ -35,9 +35,7 @@ public class Card : MonoBehaviour
 
     void start()
     {
-        startPos = transform.position;
-
-        
+        startPos = transform.position; 
     }
     public void Setting(int idx)
     {
@@ -119,7 +117,7 @@ public class Card : MonoBehaviour
         if (ismatched == true)
         {
             t += Time.deltaTime * speed;
-            transform.position = Vector2.Lerp(startPos, endPos, t);
+            transform.position = Vector2.Lerp(this.transform.position, endPos, t);
         }
         else
         {

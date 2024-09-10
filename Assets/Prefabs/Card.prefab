@@ -362,7 +362,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 561ae53c63ac26041ad620d210674aea, type: 3}
   audioSource: {fileID: 0}
   endPos: {x: 0, y: 0}
-  speed: 1.2
+  speed: 0.022
 --- !u!95 &3071658797674857604
 Animator:
   serializedVersion: 5
