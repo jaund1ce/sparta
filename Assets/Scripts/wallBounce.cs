@@ -7,15 +7,14 @@ public class wallBounce : MonoBehaviour
     [SerializeField] [Range(500f, 2000f)] float speed = 1000f; //ball 이동속도 최소 500f ~ 최대 2000f 
     public Rigidbody2D rb;
     float xBall, yBall;
-    
 
     void Start()
     {
         
         rb = GetComponent<Rigidbody2D>();
 
-        xBall = Random.Range(-2.0f, 2.0f);
-        yBall = Random.Range(-3.0f, 1.3f);
+        xBall = Random.Range(-1f, 1f);
+        yBall = Random.Range(-1f, 1f);
 
         Vector2 dir = new Vector2(xBall, yBall).normalized;  
 

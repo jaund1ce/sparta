@@ -29,14 +29,19 @@ public class GameManager : MonoBehaviour
     public AudioClip matchclip;
     public AudioClip failclip;
     public GameObject hammer;
+    public GameObject fire;
+    public GameObject spark;
+    public GameObject ball;
 
     public GameObject transparent;//≈ı∏Ì
 
     void Start()
     {
         Time.timeScale = 1.0f;
+        ball.SetActive(true);
         audioSource = GetComponent<AudioSource>();
-
+        InvokeRepeating("makeFire", 0f, 1f);
+        InvokeRepeating("makeSpark", 1f, 3f);
     }
 
     // Update is called once per frame
@@ -111,5 +116,15 @@ public class GameManager : MonoBehaviour
     void playmatch()
     {
         audioSource.PlayOneShot(matchclip);
+    }
+
+    void makeFire()
+    {
+        Instantiate(fire);
+    }
+
+    void makeSpark()
+    {
+        Instantiate(spark);
     }
 }
