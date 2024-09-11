@@ -1800,7 +1800,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 905759403}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
-        m_MethodName: stage
+        m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3372,6 +3372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hammer
       objectReference: {fileID: 0}
+    - target: {fileID: 4344209911675825347, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -3390,15 +3394,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9203019967396458664, guid: bcadb5fb15826864497e2b1adfa050a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

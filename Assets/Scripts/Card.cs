@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 public class Card : MonoBehaviour
 {
+    bool ismatched = false;
     public int index = 0;
 
     public SpriteRenderer frontImage;
@@ -15,15 +16,44 @@ public class Card : MonoBehaviour
 
     public Animator anim;
 
+    Vector2 startPos;
+    public Vector2 endPos;
+
+    public float speed;
+    float t = 0f;
 
     public AudioClip clip;
     public AudioSource audioSource;
 
     public Animator cardAnimator;
+
+    void start()
+    {
+        startPos = transform.position;
+    }
+
     public void Setting(int idx)
     {
         index = idx;
         frontImage.sprite = Resources.Load<Sprite>($"card{index}");
+
+        if (index == 0 || index == 1)
+        {
+            endPos = GameManager.Instance.card02.transform.position;                            // new Vector3(-0.649999976f, 2.5f, 0f);
+        }
+        else if (index == 2 || index == 3)
+        {
+            endPos = GameManager.Instance.card03.transform.position;                            //new Vector3(0.649999976f, 2.5f, 0f);
+        }
+        else if (index == 4 || index == 5)
+        {
+            endPos = GameManager.Instance.card01.transform.position;                           //new Vector3(-1.95000005f, 2.5f, 0f);
+        }
+        else if (index == 6 || index == 7)
+        {
+            endPos = GameManager.Instance.card04.transform.position;                           //new Vector3(1.95000005f, 2.5f, 0f);
+        }
+
     }
     public void OpenCard()
     {
@@ -46,6 +76,7 @@ public class Card : MonoBehaviour
 
     public void DestroyCard()
      {
+        ismatched = true;
 		Invoke("DestoryCardInvoke", 1f);
      }
 
@@ -85,6 +116,18 @@ public class Card : MonoBehaviour
         {
             cardAnimator.enabled = true;
         }
+        
+
+        if (ismatched == true)
+        {
+            t += Time.deltaTime * speed;
+            transform.position = Vector2.Lerp(this.transform.position, endPos, t);
+        }
+        else
+        {
+            return;
+        }
+
     }
 
     void frontactive()

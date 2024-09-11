@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
             transparent.SetActive(false);
             Cursor.visible = true; // 마우스 커서 활성화
             hammer.SetActive(false); // 해머 오브젝트 종료
+            failTxt.SetActive(true);
         }
 
         if (time >= 27.0f)
