@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         time += Time.deltaTime;
         timeTxt.text = time.ToString("N2");
 
-        if (time >= 50.0f)
+        if (time >= 60.0f)
         {
             Time.timeScale = 0.0f;
             transparent.SetActive(false);
@@ -54,9 +54,9 @@ public class GameManager : MonoBehaviour
             failTxt.SetActive(true);
         }
 
-        if (time >= 27.0f)
+        if (time >= 57.0f)
         {
-            if (time < 30f)
+            if (time < 60f)
             {
                 transparent.SetActive(true);
             }
