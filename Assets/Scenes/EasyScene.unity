@@ -946,8 +946,10 @@ MonoBehaviour:
   matchclip: {fileID: 8300000, guid: 6b8f5755ab05ca1438caae7b90075857, type: 3}
   failclip: {fileID: 8300000, guid: d1a8191fc745ebc4c90237ddf2a37251, type: 3}
   hammer: {fileID: 1648228954}
+  fire: {fileID: 5021202817364141768, guid: 39d942df6c2e03d459a3a6612661b216, type: 3}
+  spark: {fileID: 1689667068463867151, guid: 7e46b2b7cd83cba48a8111c9c91eef47, type: 3}
+  ball: {fileID: 4841260989186609267, guid: 85fcf4645fa6f4b4997e367bd3cc7490, type: 3}
   transparent: {fileID: 833053911}
-  CatImage: {fileID: 1755250485}
 --- !u!4 &1291322565
 Transform:
   m_ObjectHideFlags: 0
@@ -1337,11 +1339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b61c1f5899c5d428652549c533abe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1755250485 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 82349115749789117, guid: 6332c0ad3bcf4ad479a89e5685105e7c, type: 3}
-  m_PrefabInstance: {fileID: 8916251546425168132}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1755250486 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 245848045072316198, guid: 6332c0ad3bcf4ad479a89e5685105e7c, type: 3}
