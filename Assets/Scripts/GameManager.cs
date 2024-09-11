@@ -83,8 +83,8 @@ public class GameManager : MonoBehaviour
 
     public void checkMatched()
     {
-        if (firstCard.index == secondCard.index)
-        {
+        if (firstCard != secondCard && firstCard.index == secondCard.index)
+            {
             Invoke("playmatch", 0.5f);
 
             firstCard.DestroyCard();
