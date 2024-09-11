@@ -62,7 +62,6 @@ public class Card : MonoBehaviour
         Invoke("frontactive", 0.4f);
         Invoke("backactive", 0.4f);
 
-
         if (GameManager.Instance.firstCard == null)
         {
             GameManager.Instance.firstCard = this;
@@ -78,6 +77,7 @@ public class Card : MonoBehaviour
      {
         ismatched = true;
 		Invoke("DestoryCardInvoke", 1f);
+        
      }
 
     void DestoryCardInvoke()

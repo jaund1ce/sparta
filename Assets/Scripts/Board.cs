@@ -60,10 +60,4 @@ public class Board : MonoBehaviour
         // 생성된 오브젝트가 목표 위치로 부드럽게 이동
         gogo.transform.position = Vector3.MoveTowards(gogo.transform.position, targetPosition, 5f * Time.deltaTime);
     }
-
-    void CardMix(int[] arr, Card card)
-    {
-
-    }
-
 }

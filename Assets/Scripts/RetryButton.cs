@@ -34,4 +34,17 @@ public class NewBehaviourScript : MonoBehaviour
     {
         SceneManager.LoadScene("HardScene");
     }
+
+    public void ClearEasy()
+    {
+        PlayerPrefs.SetInt("Completedeasy", 1);
+        PlayerPrefs.Save();
+        Debug.Log("노말 조건 달성");
+    }
+    public void ClearNomal()
+    {
+        PlayerPrefs.SetInt("CompletedNomal", 1);
+        PlayerPrefs.Save();
+        Debug.Log("하드 조건 달성");
+    }
 }
