@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public int cardCount = 0;
     public GameObject failTxt;
     public GameObject clearTxt;
+    public GameObject ClearBtn;
     public AudioSource audioSource;
 
     public AudioClip countdown;
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
         time += Time.deltaTime;
         timeTxt.text = time.ToString("N2");
 
-        if (time >= 30.0f)
+        if (time >= 50.0f)
         {
             Time.timeScale = 0.0f;
             transparent.SetActive(false);
@@ -86,6 +87,7 @@ public class GameManager : MonoBehaviour
             if (cardCount == 0)
             {
                 clearTxt.SetActive(true);
+                ClearBtn.SetActive(true);
                 Time.timeScale = 0.0f;
             }
         }
