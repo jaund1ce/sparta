@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
 
-
     }
 
     // Update is called once per frame
@@ -83,6 +82,7 @@ public class GameManager : MonoBehaviour
             secondCard.DestroyCard();
             cardCount -= 2;
 
+
             if (cardCount == 0)
             {
                 clearTxt.SetActive(true);
@@ -95,6 +95,7 @@ public class GameManager : MonoBehaviour
             firstCard.CloseCard();
             secondCard.CloseCard();
         }
+
 
         firstCard = null;
         secondCard = null;
