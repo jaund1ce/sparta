@@ -15,8 +15,7 @@ public class Hammer : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        Cursor.visible = false;
+    {       
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = mousePos;
 
