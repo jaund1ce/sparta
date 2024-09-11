@@ -29,12 +29,12 @@ public class BtnManager : MonoBehaviour
         if (WinNomal == 1)
         {
             HardButton.SetActive(true);
-            Debug.Log("하드 버튼 활성화");
+            //Debug.Log("하드 버튼 활성화");
         }
         else
         {
             HardButton.SetActive(false);
-            Debug.Log("하드 버튼 비활성화");
+            //Debug.Log("하드 버튼 비활성화");
         }
     }
 
