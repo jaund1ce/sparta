@@ -61,6 +61,9 @@ public class Board : MonoBehaviour
         gogo.transform.position = Vector3.MoveTowards(gogo.transform.position, targetPosition, 5f * Time.deltaTime);
     }
 
+    void CardMix(int[] arr, Card card)
+    {
 
+    }
 
 }

@@ -28,18 +28,15 @@ public class GameManager : MonoBehaviour
     public AudioClip matchclip;
     public AudioClip failclip;
     public GameObject hammer;
-    public GameObject fire; // ºÒ ±â¹Í
-    public GameObject spark; // ½ºÆÄÅ© ±â¹Í
 
     public GameObject transparent;//Åõ¸í
 
     void Start()
     {
         Time.timeScale = 1.0f;
-        Cursor.visible = false;
         audioSource = GetComponent<AudioSource>();
-        InvokeRepeating("makeFire", 0f, 1f);
-        InvokeRepeating("makeSpark", 1f, 3f);
+
+
     }
 
     // Update is called once per frame
@@ -88,9 +85,8 @@ public class GameManager : MonoBehaviour
 
             if (cardCount == 0)
             {
-                Cursor.visible = true;
                 clearTxt.SetActive(true);
-                Time.timeScale = 0.0f;            
+                Time.timeScale = 0.0f;
             }
         }
         else
@@ -114,13 +110,4 @@ public class GameManager : MonoBehaviour
         audioSource.PlayOneShot(matchclip);
     }
 
-    void makeFire() // ºÒ±â¹Í»ý¼º
-    {
-        Instantiate(fire);
-    }
-
-    void makeSpark()
-    {
-        Instantiate(spark);
-    }
 }
