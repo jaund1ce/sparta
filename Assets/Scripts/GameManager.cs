@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public GameObject hammer;
 
     public GameObject transparent;//Åõ¸í
-
+    public GameObject CatImage;
     void Start()
     {
         Time.timeScale = 1.0f;
@@ -64,6 +64,14 @@ public class GameManager : MonoBehaviour
             
         }
 
+        if (time > 3f && time < 10f)
+        {
+        CatImage.SetActive(true);
+        }
+        if(time >15f)
+        {
+            CatImage.SetActive(false);
+        }
     }
     void Awake()
     {
