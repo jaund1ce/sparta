@@ -3009,6 +3009,8 @@ MonoBehaviour:
   matchclip: {fileID: 8300000, guid: 6b8f5755ab05ca1438caae7b90075857, type: 3}
   failclip: {fileID: 8300000, guid: d1a8191fc745ebc4c90237ddf2a37251, type: 3}
   hammer: {fileID: 1648228954}
+  fire: {fileID: 5021202817364141768, guid: 39d942df6c2e03d459a3a6612661b216, type: 3}
+  spark: {fileID: 1689667068463867151, guid: 7e46b2b7cd83cba48a8111c9c91eef47, type: 3}
   transparent: {fileID: 833053911}
 --- !u!4 &1291322565
 Transform:
