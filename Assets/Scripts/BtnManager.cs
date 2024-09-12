@@ -6,6 +6,8 @@ public class BtnManager : MonoBehaviour
 {
     public GameObject NomalButton; // 노말 버튼
     public GameObject HardButton;  // 하드 버튼
+    public GameObject NomalUn;
+    public GameObject HardUn;
 
     void Start()
     {
@@ -18,11 +20,13 @@ public class BtnManager : MonoBehaviour
         {
             NomalButton.SetActive(true);
             Debug.Log("노말 버튼 활성화");
+            NomalUn.SetActive(false);
         }
         else
         {
             NomalButton.SetActive(false);
             Debug.Log("노말 버튼 비활성화");
+            NomalUn.SetActive(true);
         }
 
         // 하드 버튼 활성화 (WinNomal이 1이면 하드 버튼 활성화)
@@ -30,11 +34,13 @@ public class BtnManager : MonoBehaviour
         {
             HardButton.SetActive(true);
             Debug.Log("하드 버튼 활성화");
+            HardUn.SetActive(false);
         }
         else
         {
             HardButton.SetActive(false);
             Debug.Log("하드 버튼 비활성화");
+            HardUn.SetActive(true);
         }
     }
 
