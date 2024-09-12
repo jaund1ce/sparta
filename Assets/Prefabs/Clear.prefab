@@ -2042,6 +2042,7 @@ GameObject:
   - component: {fileID: 6774144109867851308}
   - component: {fileID: 5739112220388625723}
   - component: {fileID: 925267817819996837}
+  - component: {fileID: 1576374538166209244}
   m_Layer: 5
   m_Name: ClearTxt
   m_TagString: Untagged
@@ -2109,7 +2110,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: THANK YOU FOR PLAYING !
+  m_Text: LEVEL CLEAR!
 --- !u!114 &5739112220388625723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2178,6 +2179,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b61c1f5899c5d428652549c533abe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1576374538166209244
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5141382812722184452}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c46dcd53bc53df4e97a7910c01f2cc7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5345949525771162260
 GameObject:
   m_ObjectHideFlags: 0

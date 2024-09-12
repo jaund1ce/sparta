@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject transparent;//≈ı∏Ì
 
+
     void Start()
     {
         string sceneName = SceneManager.GetActiveScene().name;
@@ -148,7 +149,6 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
-
     public void checkMatched()
     {
         if (firstCard.index == secondCard.index)
