@@ -1274,6 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTxt: {fileID: 738148075}
+  time: 0
   firstCard: {fileID: 0}
   secondCard: {fileID: 0}
   card01: {fileID: 912712098}
@@ -1285,7 +1286,7 @@ MonoBehaviour:
   cardCount: 0
   failTxt: {fileID: 1657167316}
   clearTxt: {fileID: 1843999854}
-  ClearBtn: {fileID: 0}
+  ClearBtn: {fileID: 457503342}
   audioSource: {fileID: 0}
   countdown1: {fileID: 8300000, guid: de18569aaa9f38844ab0a03781154b00, type: 3}
   countdown2: {fileID: 8300000, guid: de18569aaa9f38844ab0a03781154b00, type: 3}

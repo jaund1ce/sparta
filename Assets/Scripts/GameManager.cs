@@ -42,8 +42,10 @@ public class GameManager : MonoBehaviour
 
 
     void Start()
-    {
+    {        
         string sceneName = SceneManager.GetActiveScene().name;
+        Cursor.visible = false; // ¸¶¿ì½º Ä¿¼­ ¼û±è
+
         switch (sceneName)
         {
             case "EasyScene":
@@ -169,6 +171,7 @@ public class GameManager : MonoBehaviour
                 clearTxt.SetActive(true);
                 ClearBtn.SetActive(true);
                 Time.timeScale = 0.0f;
+                Cursor.visible = true;
             }
         }
         else
