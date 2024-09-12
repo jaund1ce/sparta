@@ -29,14 +29,19 @@ public class GameManager : MonoBehaviour
     public AudioClip matchclip;
     public AudioClip failclip;
     public GameObject hammer;
+    public GameObject fire;
+    public GameObject spark;
+    public GameObject ball;
 
     public GameObject transparent;//≈ı∏Ì
-    public GameObject CatImage;
+
     void Start()
     {
         Time.timeScale = 1.0f;
+        ball.SetActive(true);
         audioSource = GetComponent<AudioSource>();
-
+        InvokeRepeating("makeFire", 0f, 1f);
+        InvokeRepeating("makeSpark", 1f, 3f);
     }
 
     // Update is called once per frame
@@ -45,7 +50,7 @@ public class GameManager : MonoBehaviour
         time += Time.deltaTime;
         timeTxt.text = time.ToString("N2");
 
-        if (time >= 60.0f)
+        if (time >= 50.0f)
         {
             Time.timeScale = 0.0f;
             transparent.SetActive(false);
@@ -54,9 +59,9 @@ public class GameManager : MonoBehaviour
             failTxt.SetActive(true);
         }
 
-        if (time >= 57.0f)
+        if (time >= 27.0f)
         {
-            if (time < 60f)
+            if (time < 30f)
             {
                 transparent.SetActive(true);
             }
@@ -64,14 +69,6 @@ public class GameManager : MonoBehaviour
             
         }
 
-        if (time > 3f && time < 10f)
-        {
-        CatImage.SetActive(true);
-        }
-        if(time >15f)
-        {
-            CatImage.SetActive(false);
-        }
     }
     void Awake()
     {
@@ -119,5 +116,15 @@ public class GameManager : MonoBehaviour
     void playmatch()
     {
         audioSource.PlayOneShot(matchclip);
+    }
+
+    void makeFire()
+    {
+        Instantiate(fire);
+    }
+
+    void makeSpark()
+    {
+        Instantiate(spark);
     }
 }
