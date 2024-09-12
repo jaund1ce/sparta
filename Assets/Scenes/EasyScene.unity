@@ -515,7 +515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5011199020533900769, guid: 0ff22b2055424654093c85c1d2f850e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 5011199020533900769, guid: 0ff22b2055424654093c85c1d2f850e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -712,7 +712,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3137255}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.3137255}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -937,6 +937,8 @@ MonoBehaviour:
   card02: {fileID: 660420648}
   card03: {fileID: 699037038}
   card04: {fileID: 210854790}
+  Catimage: {fileID: 8916251546425168133}
+  sv: 0
   cardCount: 0
   failTxt: {fileID: 1657167316}
   clearTxt: {fileID: 1528843032}
@@ -1132,7 +1134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1968549407627654904, guid: 8b4ba92befd53744682061eacc098b20, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 1968549407627654904, guid: 8b4ba92befd53744682061eacc098b20, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1520,7 +1522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6646358980124489888, guid: cfda9787e8634a74782296a785a628c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 6646358980124489888, guid: cfda9787e8634a74782296a785a628c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1679,7 +1681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4570347463538292957, guid: 91e83719a47666b4ab7e2e4e99b6034b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 4570347463538292957, guid: 91e83719a47666b4ab7e2e4e99b6034b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1819,6 +1821,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6332c0ad3bcf4ad479a89e5685105e7c, type: 3}
+--- !u!1 &8916251546425168133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 82349115749789117, guid: 6332c0ad3bcf4ad479a89e5685105e7c, type: 3}
+  m_PrefabInstance: {fileID: 8916251546425168132}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
