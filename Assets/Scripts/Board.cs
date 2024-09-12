@@ -23,9 +23,9 @@ public class Board : MonoBehaviour
 
             if (gameManager != null)
             {
-                int sv = gameManager.sv; // GameManager의 int 값을 가져옴
-                Debug.Log("GameManager에서 가져온 sv 값: " + sv);
-                switch (sv)
+                int svBoard = gameManager.sv; // GameManager의 int 값을 가져옴
+                //Debug.Log("GameManager에서 가져온 sv 값: " + svBoard);
+                switch (svBoard)
                 {
                     case 1:
                         CardEasy();
@@ -34,7 +34,7 @@ public class Board : MonoBehaviour
                         CardEasy();
                         break;
                     case 3:
-                        CardHard();
+                        CardEasy();
                         break;
                     default:
                         CardHard();
