@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,7 +18,9 @@ public class GameManager : MonoBehaviour
     public GameObject card02;
     public GameObject card03;
     public GameObject card04;
+    public GameObject Catimage;
 
+    public int sv;
 
     public int cardCount = 0;
     public GameObject failTxt;
@@ -29,14 +32,40 @@ public class GameManager : MonoBehaviour
     public AudioClip matchclip;
     public AudioClip failclip;
     public GameObject hammer;
+    public GameObject fire;
+    public GameObject spark;
+    public GameObject ball;
 
     public GameObject transparent;//투명
-    public GameObject CatImage;
+
     void Start()
     {
+        string sceneName = SceneManager.GetActiveScene().name;
+        switch (sceneName)
+        {
+            case "EasyScene":
+                sv = 1;
+                break;
+            case "NomalScene":
+                sv = 2;
+                InvokeRepeating("makeFire", 0f, 1f);
+                InvokeRepeating("makeSpark", 1f, 3f);
+                break;
+            case "HardScene":
+                sv = 3;
+                InvokeRepeating("makeFire", 0f, 1f);
+                InvokeRepeating("makeSpark", 1f, 3f);
+                break;
+            default:
+                sv = 0;
+                break;
+        }
+        
+        Debug.Log(sv);
+
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
-
+        
     }
 
     // Update is called once per frame
@@ -44,34 +73,73 @@ public class GameManager : MonoBehaviour
     {
         time += Time.deltaTime;
         timeTxt.text = time.ToString("N2");
-
-        if (time >= 60.0f)
+        switch (sv)
         {
-            Time.timeScale = 0.0f;
-            transparent.SetActive(false);
-            Cursor.visible = true; // 마우스 커서 활성화
-            hammer.SetActive(false); // 해머 오브젝트 종료
-            failTxt.SetActive(true);
+            case 1:
+                if (time >= 60.0f)
+                {
+                    GameOver();
+                }
+
+                if (time >= 57.0f)
+                {
+                    if (time < 60f)
+                    {
+                        transparent.SetActive(true);
+                    }
+                    Invoke("playcountdown", 0f);
+
+                }
+                break;
+            case 2:
+                if (time >= 50.0f)
+                {
+                    GameOver();
+                }
+
+                if (time >= 47.0f)
+                {
+                    if (time < 50f)
+                    {
+                        transparent.SetActive(true);
+                    }
+                    Invoke("playcountdown", 0f);
+
+                }
+                break;
+            case 3:
+                if (time >= 40.0f)
+                {
+                    GameOver();
+                }
+
+                if (time >= 37.0f)
+                {
+                    if (time < 40f)
+                    {
+                        transparent.SetActive(true);
+                    }
+                    Invoke("playcountdown", 0f);
+
+                }
+                break;
         }
 
-        if (time >= 57.0f)
+        if (sv == 3)
         {
-            if (time < 60f)
+            if (time >= 4f)
             {
-                transparent.SetActive(true);
+                if (time < 8f) {
+                    ShowCatimage(); 
+                }
             }
-            audioSource.PlayOneShot(countdown);
-            
+
+            if (time >= 10f)
+            {
+                ball.SetActive(true);
+            }
         }
 
-        if (time > 3f && time < 10f)
-        {
-        CatImage.SetActive(true);
-        }
-        if(time >15f)
-        {
-            CatImage.SetActive(false);
-        }
     }
     void Awake()
     {
@@ -119,5 +187,34 @@ public class GameManager : MonoBehaviour
     void playmatch()
     {
         audioSource.PlayOneShot(matchclip);
+    }
+
+    void playcountdown()
+    {
+        audioSource.PlayOneShot(countdown);
+    }
+
+    void makeFire()
+    {
+        Instantiate(fire);
+    }
+
+    void ShowCatimage()
+    {
+        Catimage.SetActive(true);
+    }
+
+    void makeSpark()
+    {
+        Instantiate(spark);
+    }
+
+    void GameOver()
+    {
+        Time.timeScale = 0.0f;
+        transparent.SetActive(false);
+        Cursor.visible = true; 
+        hammer.SetActive(false); 
+        failTxt.SetActive(true);
     }
 }
