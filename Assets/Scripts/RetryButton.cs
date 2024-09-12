@@ -14,8 +14,13 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            DeleteData();
+        }
     }
+
+
 
     
     public void stage()
@@ -34,6 +39,10 @@ public class NewBehaviourScript : MonoBehaviour
     {
         SceneManager.LoadScene("HardScene");
     }
+    public void SecretBtn()
+    {
+        SceneManager.LoadScene("SecretScene");
+    }
 
     public void ClearEasy()
     {
@@ -47,4 +56,11 @@ public class NewBehaviourScript : MonoBehaviour
         PlayerPrefs.Save();
         Debug.Log("하드 조건 달성");
     }
+
+    public void DeleteData()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
+    
 }

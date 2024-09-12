@@ -6,6 +6,7 @@ public class BtnManager : MonoBehaviour
 {
     public GameObject NomalButton; // 노말 버튼
     public GameObject HardButton;  // 하드 버튼
+    public GameObject SecretButton;
     public GameObject NomalUn;
     public GameObject HardUn;
 
@@ -43,10 +44,44 @@ public class BtnManager : MonoBehaviour
             HardUn.SetActive(true);
         }
     }
-
+    private KeyCode[] konamiCode = {
+        KeyCode.UpArrow, KeyCode.UpArrow,
+        KeyCode.DownArrow, KeyCode.DownArrow,
+        KeyCode.LeftArrow, KeyCode.RightArrow,
+        KeyCode.LeftArrow, KeyCode.RightArrow,
+        KeyCode.B, KeyCode.A
+    };
+    int currentInputIndex = 0;
     // Update is called once per frame
     void Update()
     {
         
+
+        if (Input.anyKeyDown)
+        {
+            if (Input.GetKeyDown(konamiCode[currentInputIndex]))
+            {
+                // 올바른 키가 입력되면 다음 인덱스로
+                currentInputIndex++;
+                // 모든 커맨드가 성공적으로 입력되었으면 버튼 생성
+                if (currentInputIndex >= konamiCode.Length)
+                {
+                    ActivateSecretButton();
+                    currentInputIndex = 0; // 인덱스 초기화 (다시 입력 가능)
+                }
+            }
+            else
+            {
+                // 잘못된 입력이 들어오면 다시 처음부터
+                currentInputIndex = 0;
+            }
+        }
     }
+
+    void ActivateSecretButton()
+    {
+        Debug.Log("코나미 커맨드 입력 완료! 비밀 버튼 활성화");        
+            SecretButton.SetActive(true);
+    }
+
 }
