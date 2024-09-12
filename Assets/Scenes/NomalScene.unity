@@ -838,7 +838,9 @@ MonoBehaviour:
   clearTxt: {fileID: 330904478}
   ClearBtn: {fileID: 1739820682}
   audioSource: {fileID: 0}
-  countdown: {fileID: 8300000, guid: de18569aaa9f38844ab0a03781154b00, type: 3}
+  countdown1: {fileID: 8300000, guid: de18569aaa9f38844ab0a03781154b00, type: 3}
+  countdown2: {fileID: 8300000, guid: de18569aaa9f38844ab0a03781154b00, type: 3}
+  countdown3: {fileID: 8300000, guid: de18569aaa9f38844ab0a03781154b00, type: 3}
   matchclip: {fileID: 8300000, guid: 6b8f5755ab05ca1438caae7b90075857, type: 3}
   failclip: {fileID: 8300000, guid: d1a8191fc745ebc4c90237ddf2a37251, type: 3}
   hammer: {fileID: 1648228954}

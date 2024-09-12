@@ -28,7 +28,9 @@ public class GameManager : MonoBehaviour
     public GameObject ClearBtn;
     public AudioSource audioSource;
 
-    public AudioClip countdown;
+    public AudioClip countdown1;
+    public AudioClip countdown2;
+    public AudioClip countdown3;
     public AudioClip matchclip;
     public AudioClip failclip;
     public GameObject hammer;
@@ -88,7 +90,7 @@ public class GameManager : MonoBehaviour
                     {
                         transparent.SetActive(true);
                     }
-                    Invoke("playcountdown", 0f);
+                    audioSource.PlayOneShot(countdown1);
 
                 }
                 break;
@@ -104,7 +106,7 @@ public class GameManager : MonoBehaviour
                     {
                         transparent.SetActive(true);
                     }
-                    Invoke("playcountdown", 0f);
+                    audioSource.PlayOneShot(countdown2);
 
                 }
                 break;
@@ -120,7 +122,7 @@ public class GameManager : MonoBehaviour
                     {
                         transparent.SetActive(true);
                     }
-                    Invoke("playcountdown", 0f);
+                    audioSource.PlayOneShot(countdown3);
 
                 }
                 break;
@@ -187,11 +189,6 @@ public class GameManager : MonoBehaviour
     void playmatch()
     {
         audioSource.PlayOneShot(matchclip);
-    }
-
-    void playcountdown()
-    {
-        audioSource.PlayOneShot(countdown);
     }
 
     void makeFire()
