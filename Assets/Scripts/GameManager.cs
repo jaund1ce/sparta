@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public Text timeTxt;
-    float time = 0.0f;
+    public float time = 0.0f;
 
     public static GameManager Instance;
 
