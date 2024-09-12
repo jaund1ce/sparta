@@ -104,9 +104,6 @@ public class Card : MonoBehaviour
         transform.localScale = new Vector3(3f, 3f, 1f);
         audioSource = GetComponent<AudioSource>();
         InvokeRepeating("CardScaleDown", 0f, 0.02f);
-
-       
-
     }
 
     // Update is called once per frame
@@ -147,4 +144,5 @@ public class Card : MonoBehaviour
         transform.localScale -= new Vector3(0.02f, 0.02f, 0f);
         }
     }
+
 }

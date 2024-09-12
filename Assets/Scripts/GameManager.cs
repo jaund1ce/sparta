@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour
                 break;
             default:
                 sv = 0;
+                InvokeRepeating("makeFire", 0f, 0.5f);
+                InvokeRepeating("makeSpark", 1f, 2f);
                 break;
         }
         
@@ -128,7 +130,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        if (sv == 3)
+        if (sv == 3 || sv == 0)
         {
             if (time >= 4f)
             {
